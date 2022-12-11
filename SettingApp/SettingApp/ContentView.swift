@@ -13,7 +13,29 @@ struct ContentView: View {
         NavigationView {
             List {
                 Section {
-                    Text("nini")
+                    NavigationLink {
+                        Text("프로필 화면")
+                    } label: {
+                        HStack {
+                            Image("emoji2")
+                                .resizable()
+                                .aspectRatio( contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                                .padding(.all, 10)
+                                .background(.white)
+                                .clipShape(Circle())
+                            
+                            VStack(alignment: .leading, spacing: 3) {
+                                Text("nini")
+                                    .font(.system(size: 24))
+                                    .fontWeight(.regular)
+                                Text("Apple ID, iCloud, 미디어 및 구입")
+                                    .font(.system(size: 14))
+                            }
+                            .padding(.leading, 6)
+                        }
+                        .padding(.vertical, 6)
+                    }
                 }
                 
                 Section {
